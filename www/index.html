@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/skin.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link rel="stylesheet" type="text/css" href="styles/ionicons.min.css">
+<link href="http://fonts.googleapis.com/css?family=Lato|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+    <title>Hello World</title>
+</head>
+
+<body class="sidebar-bg-2">
+    <div class="app">
+        <div id="page-transitions">
+<div class="page-preloader page-preloader-dark">
+<div class="spinner"></div>
+</div>
+<div class="sidebar-tap-close"></div><div class="fade-effect"></div>
+<div class="sidebar-left">
+<div class="sidebar-scroll">
+<div class="sidebar-header">
+<a href="#" class="sidebar-logo"></a>
+</div>
+<div class="sidebar-menu">
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index.html"> 
+<i class="ion-ios-heart-outline"></i>Welcome<i class="ion-record"></i>
+</a>
+<div class="has-submenu">
+<a class="menu-item open-submenu active-item" href="#"> 
+<i class="ion-ios-home-outline"></i>Home<em class="menu-number">0</em>
+</a>
+<div class="submenu active-submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-classic.html">Classic Page</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-cover.html">Cover Page</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-round.html">Circle Page</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-no-slider.html">No Slider</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-store.html">Store Front</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-news.html">News Front</a>
+<a class="menu-item active-item" href="http://www.enableds.com/products/sceena/dark2/index-splash.html">Splash Page</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-login.html">Login Page</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-register.html">Register Page</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-landing.html">Landing Page</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/index-homescreen.html">Mobile Home Screen</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-ios-gear-outline"></i>Features<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-tabs.html">Tabs</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-toggles.html">Toggles</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-dropdown.html">Dropdowns</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-accordion.html">Accordions</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-typography.html">Typography</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-menu-bars.html">Menu Bars</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-notifications.html">Notifications</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-dividers.html">Deco & Dividers</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-buttons.html">Buttons & Icons</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-inputs.html">Inputs Elements</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/features-detection.html">Device Detection</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-ios-camera-outline"></i>Gallery<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/gallery-round.html">Round</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/gallery-square.html">Square</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/gallery-blocks.html">Blocks</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/gallery-adaptive.html">Adaptive</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/gallery-collections.html">Collections</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-ios-analytics-outline"></i>Portfolio<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/portfolio-one.html">One</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/portfolio-two.html">Two</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/portfolio-fluid.html">Fluid</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/portfolio-cards.html">Cards</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/portfolio-adaptive.html">Adaptive</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/portfolio-wide.html">Widescreen</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-ios-list-outline"></i>Site Pages<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-error.html">Error</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-soon.html">Soon</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-login.html">Login</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-register.html">Register</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-reviews.html">Reviews</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-profile-1.html">Profile 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-profile-2.html">Profile 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-timeline-1.html">Timeline 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-timeline-2.html">Timeline 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-price-table.html">Pricing Table</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-sitemap.html">Sitemap</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-status.html">System Status</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-iphone"></i>App Styled<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-chat.html">Chat</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-error.html">Error</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-soon.html">Soon</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-login.html">Login</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-register.html">Register</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-tasklist.html">Tasklist</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-checklist.html">Checklist</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-interests.html">Interests</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-calendar.html">Calendar</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-coverpage.html">Coverpage</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-users.html">Userlist</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/pageapp-map.html">Fullscreen Map</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-ios-cart-outline"></i>Store Pages<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-faq.html">F.A.Q</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-front-1.html">Home 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-front-2.html">Home 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-cover.html">Cover</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-cart-1.html">Cart 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-cart-2.html">Cart 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-cards.html">Cards</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-invoice.html">Invoice</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-history.html">History</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-product-1.html">Product 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-product-2.html">Product 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-locations.html">Locations</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/store-checkout.html">Checkout</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-ios-paper-outline"></i>News Pages<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-faq.html">F.A.Q</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-front-1.html">Home 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-front-2.html">Home 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-cover.html">Cover</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-list-1.html">List 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-list-2.html">List 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-list-3.html">List 3</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-post-1.html">Article 1</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-post-2.html">Article 2</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-post-3.html">Article 3</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/news-archive.html">Archive</a>
+</div>
+</div>
+<div class="has-submenu">
+<a class="menu-item open-submenu" href="#"> 
+<i class="ion-ipad"></i>MobileUI Pages<em class="menu-number">0</em>
+</a>
+<div class="submenu"> 
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-faq.html">F.A.Q</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-music.html">Music</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-player.html">Player</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-video.html">Video</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-weather.html">Weather</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-dialpad.html">Dialpad</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-messages.html">Messages</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-lockscreen.html">Lock Screen</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/mobileui-homescreen.html">Home Screen</a>
+</div>
+</div>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-blog.html"> 
+<i class="ion-ios-compose-outline"></i>Blog<i class="ion-record"></i>
+</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-videos.html"> 
+<i class="ion-ios-videocam-outline"></i>Videos<i class="ion-record"></i>
+</a>
+<a class="menu-item" href="http://www.enableds.com/products/sceena/dark2/page-contact.html"> 
+<i class="ion-ios-email-outline"></i>Contact<i class="ion-record"></i>
+</a>
+<a class="close-sidebar menu-item" href="#">
+<i class="ion-ios-close-empty"></i>Close<i class="ion-record"></i>
+</a>
+</div>
+<em class="sidebar-copyright">Copyright <span class="copyright-year"></span>. All Rights Reserved</em>
+</div>
+</div>
+<div class="sidebar-right">
+<div class="sidebar-scroll">
+<div class="sidebar-header">
+<a href="#" class="sidebar-logo"></a>
+</div>
+<div class="sidebar-menu">
+<a class="menu-item border-menu-yellow" href="#">
+<i class="ion-social-facebook"></i>Facebook<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-lime" href="#">
+<i class="ion-social-twitter"></i>Twitter<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-green" href="#">
+<i class="ion-social-googleplus-outline"></i>Google<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-teal" href="#">
+<i class="ion-social-linkedin"></i>LinkedIn<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-sky" href="#">
+<i class="ion-social-youtube"></i>YouTube<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-blue" href="#">
+<i class="ion-social-pinterest-outline"></i>Pinterest<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-purple" href="#">
+<i class="ion-social-instagram-outline"></i>Instagram<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-red" href="#">
+<i class="ion-ios-telephone"></i>Call Us<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-dawn" href="#">
+<i class="ion-social-skype"></i>Skype Us<i class="ion-link"></i>
+</a>
+<a class="menu-item border-menu-orange" href="#">
+<i class="ion-ios-email"></i>Mail Us<i class="ion-link"></i>
+</a>
+</div>
+<div class="sidebar-divider">
+SEND US A MESSAGE
+</div>
+<div class="sidebar-contact border-menu-dark">
+<div class="sidebar-form contact-form no-bottom">
+<p>Your message is important to us, and we'll get back to you in tops 48 hours</p>
+<div class="formSuccessMessageWrap" id="formSuccessMessageWrap">Awesome! We'll get back to you!</div>
+<form action="http://www.enableds.com/products/sceena/dark2/php/contact.php" method="post" class="contactForm" id="contactForm">
+<fieldset>
+<div class="formValidationError" id="contactNameFieldError">Name is required!</div>
+<div class="formValidationError" id="contactEmailFieldError">Mail address required!</div>
+<div class="formValidationError" id="contactEmailFieldError2">Mail address must be valid!</div>
+<div class="formValidationError" id="contactMessageTextareaError">Message field is empty!</div>
+<div class="formFieldWrap"><input onfocus="if (this.value=='Name') this.value = ''" onblur="if (this.value=='') this.value = 'Name'" type="text" name="contactNameField" value="Name" class="contactField requiredField" id="contactNameField"/></div>
+<div class="formFieldWrap"><input onfocus="if (this.value=='Email') this.value = ''" onblur="if (this.value=='') this.value = 'Email'" type="text" name="contactEmailField" value="Email" class="contactField requiredField requiredEmailField" id="contactEmailField"/></div>
+<div class="formTextareaWrap"><textarea onfocus="if (this.value=='Message') this.value = ''" onblur="if (this.value=='') this.value = 'Message'" name="contactMessageTextarea" class="contactTextarea requiredField" id="contactMessageTextarea">Message</textarea></div>
+<div class="formSubmitButtonErrorsWrap"><input type="submit" class="buttonWrap button button-green contactSubmitButton no-bottom" id="contactSubmitButton" value="SUBMIT" data-formId="contactForm"/></div>
+</fieldset>
+</form>
+</div>
+</div>
+<em class="sidebar-copyright">Copyright <span class="copyright-year"></span>. All Rights Reserved</em>
+</div>
+</div>
+<div id="page-content">
+<div class="header">
+<a href="#" class="header-icon-1 open-left-sidebar"><i class="ion-navicon"></i></a>
+<a href="#" class="header-logo scale-hover"></a>
+<a href="#" class="header-icon-4 open-right-sidebar"><i class="ion-ios-email-outline"></i></a>
+</div>
+<div id="page-content-scroll"> 
+<div class="page-fullscreen vertical-bg-1">
+<div class="page-fullscreen-content">
+<div class="page-splash">
+<img data-original="images/preload-logo.png" class="preload-image scale-hover" alt="img">
+<h1 class="color-white">Welcome</h1>
+<h2 class="color-red-dark">Power & Simplicity</h2>
+<p class="color-white center-text opacity-75">
+Welcoem to our page, this is just a splash screen, but you can go ahead
+and check out some of our pages! Let's start with the homepage!
+</p>
+<a href="#" class="scale-hover color-white border-white"><i class="ion-ios-home-outline"></i></a>
+</div>
+</div>
+<div class="overlay dark-overlay"></div>
+</div>
+</div>
+</div>
+<div class="share-bottom share-dark">
+<h3>Share Page</h3>
+<div class="share-socials-bottom">
+<a href="https://www.facebook.com/sharer/sharer.php?u=http://www.themeforest.net/">
+<i class="ion-social-facebook-outline icon-ghost facebook-bg"></i>
+Facebook
+</a>
+<a href="https://twitter.com/home?status=Check%20out%20ThemeForest%20http://www.themeforest.net">
+<i class="ion-social-twitter-outline twitter-bg"></i>
+Twitter
+</a>
+<a href="https://plus.google.com/share?url=http://www.themeforest.net">
+<i class="ion-social-googleplus-outline icon-ghost google-bg"></i>
+Google
+</a>
+<a href="https://pinterest.com/pin/create/button/?url=http://www.themeforest.net/&amp;media=https://0.s3.envato.com/files/63790821/profile-image.jpg&amp;description=Themes%20and%20Templates">
+<i class="ion-social-pinterest-outline icon-ghost pinterest-bg"></i>
+Pinterest
+</a>
+<a href="sms:">
+<i class="ion-ios-chatboxes-outline icon-ghost sms-bg"></i>
+Text
+</a>
+<a href="http://www.enableds.com/cdn-cgi/l/email-protection#39061f4a4c5b535c5a4d047a515c5a52194d51504a1949585e5c19564c4d181f5b565d4004514d4d490316164e4e4e174d515c545c5f564b5c4a4d17575c4d">
+<i class="ion-ios-email-outline icon-ghost mail-bg"></i>
+Email
+</a>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

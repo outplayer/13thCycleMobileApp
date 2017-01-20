@@ -2698,7 +2698,7 @@ ul.tabs li.current{
 /*---Splash Page---*/
 /*-----------------*/
 
-.page-splash{width:250px; padding:60px 0px 10px 0px;}
+.page-splash{width: 100%;padding:60px 0px 10px 0px;}
 .page-splash img{
     width:100px;
     height:100px;

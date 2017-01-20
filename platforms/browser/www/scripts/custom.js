@@ -19,34 +19,36 @@ return false;});$('.substract-qty').on('click',function(){var $qty=$(this).close
 return false;});});$('.remove-cart-item').click(function(){$(this).parent().parent().slideUp(250);return false;});$('.phone-pad-1').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'1');});$('.phone-pad-2').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'2');});$('.phone-pad-3').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'3');});$('.phone-pad-4').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'4');});$('.phone-pad-5').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'5');});$('.phone-pad-6').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'6');});$('.phone-pad-7').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'7');});$('.phone-pad-8').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'8');});$('.phone-pad-9').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'9');});$('.phone-pad-0').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'0');});$('.phone-pad-star').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'*');});$('.phone-pad-hash').click(function(){var this_value=$('.mobileui-dialpad input').val();$('.mobileui-dialpad input').val(this_value+'#');});$('.call-dial').click(function(){$(this).toggleClass('bg-red-dark');$(this).find('i').toggleClass('rotate-135');$('.mobileui-dialpad-numbers').slideToggle(250);$('.mobileui-dialpad-controls').slideToggle(250);});new Date($.now());var dt=new Date();var time=dt.getHours()+":"+("0"+ dt.getMinutes()).substr(-2);;$(".mobileui-lockscreen-header h3").html(time);var monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];var d=new Date();var today_day=d.getDate();var today_year=d.getFullYear();var dateString=today_day;var daysOfWeek=new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');var today_weekday=daysOfWeek[new Date(dateString).getDay()];$(".mobileui-lockscreen-header p").html(today_weekday+", "+ today_day+"  "+ monthNames[d.getMonth()]+"  "+ today_year);function calculate_lockscreen(){var lock_height=$('.mobileui-lockscreen-header').height();var lock_button=$('.mobileui-lockscreen-home').height();var lock_window=$(window).height()-0;var lock_total=lock_window-(lock_button+ lock_height);$('.mobileui-lockscreen-notifications').css('height',lock_total-160);};calculate_lockscreen();}
 setTimeout(init_template,0);$(function(){'use strict';var options={prefetch:false,cacheLength:0,blacklist:'.default-link',forms:'contactForm',onStart:{duration:500,render:function($container){$container.addClass('is-exiting');smoothState.restartCSSAnimations();$('.page-preloader').addClass('show-preloader');$('.sidebar-left, .sidebar-right').removeClass('active-sidebar-box');$('.sidebar-tap-close').removeClass('active-tap-close');setTimeout(function(){$('.fade-effect').addClass('active-fade-effect');},150);$("#page-content").css({"transform":"translateX(0px)","-webkit-transform":"translateX(0px)","-moz-transform":"translateX(0px)","-o-transform":"translateX(0px)","-ms-transform":"translateX(0px)"});return false;}},onReady:{duration:0,render:function($container,$newContent){$container.removeClass('is-exiting');$container.html($newContent);$('.page-preloader').addClass('show-preloader');$('.sidebar-left, .sidebar-right').removeClass('active-sidebar-box');$('.sidebar-tap-close').removeClass('active-tap-close');$('.fade-effect').addClass('active-fade-effect');$("#page-content").css({"transform":"translateX(0px)","-webkit-transform":"translateX(0px)","-moz-transform":"translateX(0px)","-o-transform":"translateX(0px)","-ms-transform":"translateX(0px)"});return false;}},onAfter:function($container,$newContent){setTimeout(init_template,0)
 $('.page-preloader').removeClass('show-preloader');$('.fade-effect').removeClass('active-fade-effect');}};var smoothState=$('#page-transitions').smoothState(options).data('smoothState');});});
-$("#signup").click(function(){
-var name=$("#name").val();
-var phone=$("#phone").val();
-var password=$("#password").val();
-var dataString="name="+name+"&phone="+phone+"&password="+password+"&signup=";
-if($.trim(name).length>0 & $.trim(phone).length>0 & $.trim(password).length>0)
-{
-$.ajax({
-type: "POST",
-url: 'http://api.hiwawa.pl/signup.php',
-data: dataString,
-crossDomain: true,
-cache: false,
-beforeSend: function(){ $("#signup").val('Connecting...');},
-success: function(data){
-if(data=="success")
-{
-alert("Thank you for Registering with us! you can login now");
-}
-else if(data="exist")
-{
-alert("Hey! You alreay has account! you can login with us");
-}
-else if(data="failed")
-{
-alert("Something Went wrong");
-}
-}
-});
-}return false;
+$(document).ready(function(){
+	$("#signup").click(function(){
+		var name=$("#name").val();
+		var phone=$("#phone").val();
+		var password=$("#password").val();
+		var dataString="name="+name+"&phone="+phone+"&password="+password+"&signup=";
+		if($.trim(name).length>0 & $.trim(phone).length>0 & $.trim(password).length>0)
+			{
+				$.ajax({
+				type: "POST",
+				url: 'http://api.hiwawa.pl/signup.php',
+				data: dataString,
+				crossDomain: true,
+				cache: false,
+				beforeSend: function(){ $("#signup").val('Connecting...');},
+					success: function(data){
+						if(data=="success")
+							{
+								alert("Thank you for Registering with us! you can login now");
+							}
+						else if(data="exist")
+							{
+								alert("Hey! You alreay has account! you can login with us");
+							}
+						else if(data="failed")
+							{
+								alert("Something Went wrong");
+							}
+					}
+				});
+			}return false;
+	});
 });

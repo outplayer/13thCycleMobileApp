@@ -29,7 +29,7 @@ $(document).ready(function(){
 			{
 				$.ajax({
 				type: "POST",
-				url: 'http://api.hiwawa.pl/signup.php',
+				url: url,
 				data: dataString,
 				crossDomain: true,
 				cache: false,

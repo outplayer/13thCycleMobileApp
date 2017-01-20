@@ -29,7 +29,7 @@ $(document).ready(function(){
 			{
 				$.ajax({
 				type: "POST",
-				url: url,
+				url: 'http://api.hiwawa.pl/signup.php',
 				data: dataString,
 				crossDomain: true,
 				cache: false,
@@ -39,10 +39,7 @@ $(document).ready(function(){
 							{
 								alert("Thank you for Registering with us! you can login now");
 							}
-						else if(data="exist")
-							{
-								alert("Hey! You alreay has account! you can login with us");
-							}
+						
 						else if(data="failed")
 							{
 								alert("Something Went wrong");
